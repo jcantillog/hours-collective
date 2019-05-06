@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --primary-dark: #083169;
+  --primary-light: #0083be;
+  --white-text: #fff;
+  --border-black-14: rgba(0, 0, 0, 0.36);
+  --primary-bg: #fff;
+  --primary-text: rgba(33, 37, 41, 1);
+
+  /* Borders */
+  --primary-border-radius: 2px;
+
+  /* Fonts */
+  --font-family-open-sans: "Open Sans", sans-serif;
+  --title-size: 1.5em;
+
+  /* Shadows */
+  --bottom-shadow: 0 2px 3px var(--border-black-14);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-open-sans);
+  margin: 0;
+}
