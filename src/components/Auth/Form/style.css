@@ -1,0 +1,15 @@
+.main {
+    width: auto;
+}
+
+.main > .paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+}
+
+.form > .select-input {
+    display: flex;
+    z-index: 100;
+}
