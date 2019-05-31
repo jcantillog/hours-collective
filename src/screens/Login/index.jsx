@@ -6,9 +6,9 @@ import "./style.css";
 
 export default () => {
     return (
-        <div className="screen" header="">
+        <div className="screen">
             <div className="form">
-                <AuthForm/>
+                <AuthForm />
             </div>
         </div>
     );
