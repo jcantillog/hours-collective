@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 import {
@@ -54,12 +55,12 @@ class AuthForm extends Component {
                     />
                 </FormControl>
                 <Button
-                    type="submit"
                     fullWidth
                     variant="contained"
                     color="primary"
                     className="submit"
                     disabled={!selectedElement}
+                    onClick={() => this.handlerSignIn(selectedElement)}
                 >
                     Sign in
                 </Button>
@@ -67,13 +68,21 @@ class AuthForm extends Component {
         </Paper>
     }
 
-    handlerElementSelect = (element) => {
-        this.setState({ selectedElement: element });
+    handlerElementSelect = (element) => this.setState({ selectedElement: element });
+
+    handlerSignIn = (selectedElement) => {
+        localStorage.setItem("element", selectedElement && selectedElement);
+        this.handlerRouteChange();
     };
+
+    handlerRouteChange() {
+        let path = `/`;
+        this.props.history.push(path);
+    }
 }
 
 AuthForm.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default AuthForm;
+export default withRouter(AuthForm);

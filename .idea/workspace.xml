@@ -4,10 +4,6 @@
     <list default="true" id="a6ecf074-7dfa-4882-9925-edb95c240dec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Form/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Form/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,16 +19,33 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="346">
+              <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
               <folding>
-                <element signature="e#1297#1382#0" />
-                <element signature="e#1395#1494#0" />
-                <element signature="e#1022#2047#0" />
-                <element signature="e#1334#1897#0" />
-                <element signature="e#1722#2027#0" />
-                <element signature="e#2003#2019#0" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#670#730#0" />
+                <element signature="n#!!block;n#componentDidMount#0;n#AuthForm#0" />
+                <element signature="e#1034#1127#0" />
+                <element signature="e#1144#1251#0" />
+                <element signature="e#1312#2028#0" />
                 <element signature="e#2240#2285#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+              <folding>
+                <element signature="e#201#396#0" />
+                <element signature="e#524#1715#0" />
+                <element signature="e#1828#1999#0" />
+                <element signature="e#2184#2541#0" />
+                <element signature="e#2724#3077#0" />
+                <element signature="e#3212#4073#0" />
               </folding>
             </state>
           </provider>
@@ -171,6 +184,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,12 +216,12 @@
       <workItem from="1559230880684" duration="601000" />
       <workItem from="1559247278003" duration="3547000" />
       <workItem from="1559310352772" duration="599000" />
-      <workItem from="1559674379944" duration="10179000" />
+      <workItem from="1559674379944" duration="12831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52886000" />
+    <option name="totallyTimeSpent" value="55538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -216,6 +230,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -227,7 +242,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.1882353" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.225" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -337,22 +352,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="76" column="113" selection-start-line="76" selection-start-column="113" selection-end-line="76" selection-end-column="113" />
+        <state relative-caret-position="528">
+          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+          <folding>
+            <element signature="e#201#396#0" />
+            <element signature="e#524#1715#0" />
+            <element signature="e#1828#1999#0" />
+            <element signature="e#2184#2541#0" />
+            <element signature="e#2724#3077#0" />
+            <element signature="e#3212#4073#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Button/Button.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="346">
+          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
           <folding>
-            <element signature="e#1297#1382#0" />
-            <element signature="e#1395#1494#0" />
-            <element signature="e#1022#2047#0" />
-            <element signature="e#1334#1897#0" />
-            <element signature="e#1722#2027#0" />
-            <element signature="e#2003#2019#0" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#670#730#0" />
+            <element signature="n#!!block;n#componentDidMount#0;n#AuthForm#0" />
+            <element signature="e#1034#1127#0" />
+            <element signature="e#1144#1251#0" />
+            <element signature="e#1312#2028#0" />
             <element signature="e#2240#2285#0" />
           </folding>
         </state>
