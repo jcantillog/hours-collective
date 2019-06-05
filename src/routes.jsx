@@ -8,8 +8,8 @@ import ScreenLogin from "./screens/Login";
 const Routes = () => {
   return (
     <Router>
-        <PrivateRoute exact path="/" component={ScreenHome} />
-        <Route path="/login" component={ScreenLogin} />
+        <PrivateRoute exact path="/" component={ScreenHome} redirectTo="/login"/>
+        <PrivateRoute exact path="/login" component={ScreenLogin} redirectTo="/"/>
     </Router>
   );
 };

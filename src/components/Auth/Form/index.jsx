@@ -6,17 +6,10 @@ import {
     Button,
     FormControl,
     Paper,
-    Typography,
-    TextField,
-    InputAdornment,
-    IconButton,
-    withStyles
+    Typography
 } from '@material-ui/core';
 
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-
 import Select from "react-select";
 
 /* Style */
@@ -24,28 +17,10 @@ import "./style.css";
 /* Services */
 import GoogleSheetsService from "../../../services/GoogleSheetsService";
 
-const styles = theme => ({
-    paper: {
-        padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`,
-    },
-    avatar: {
-        margin: theme.spacing.unit,
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing.unit,
-    },
-    submit: {
-        marginTop: theme.spacing.unit * 3,
-    },
-});
-
 class AuthForm extends Component {
     state = {
         elements: [],
-        password: '',
-        showPassword: false
+        selectedElement: null
     };
     GoogleSheets = new GoogleSheetsService();
 
@@ -54,17 +29,16 @@ class AuthForm extends Component {
     }
 
     render() {
-        const {elements, password, showPassword} = this.state;
-        const {classes} = this.props;
+        const {elements, selectedElement} = this.state;
         return <Paper className="paper">
-            <Avatar className={classes.avatar}>
+            <Avatar className="avatar">
                 <LockOutlinedIcon/>
             </Avatar>
             <Typography component="h1" variant="h5">
                 Hours Collective
             </Typography>
-            <form className={classes.form}>
-                <FormControl margin="normal" required fullWidth>
+            <form className="form">
+                <FormControl margin="normal" fullWidth>
                     <Select
                         className="select-input"
                         placeholder="Select an element..."
@@ -75,31 +49,8 @@ class AuthForm extends Component {
                         isSearchable={true}
                         name="element"
                         options={elements}
+                        onChange={(element) => this.handlerElementSelect(element ? element.value : null)}
                         required
-                    />
-                </FormControl>
-                <FormControl margin="normal" required fullWidth>
-                    <TextField
-                        style={{zIndex: 0}}
-                        name="password"
-                        className={classes.margin}
-                        variant="outlined"
-                        type={showPassword ? 'text' : 'password'}
-                        label="Password"
-                        value={password}
-                        onChange={this.handleChange('password')}
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="Toggle password visibility"
-                                        onClick={this.handleClickShowPassword}
-                                    >
-                                        {showPassword ? <VisibilityOff/> : <Visibility/>}
-                                    </IconButton>
-                                </InputAdornment>
-                            ),
-                        }}
                     />
                 </FormControl>
                 <Button
@@ -107,7 +58,8 @@ class AuthForm extends Component {
                     fullWidth
                     variant="contained"
                     color="primary"
-                    className={classes.submit}
+                    className="submit"
+                    disabled={!selectedElement}
                 >
                     Sign in
                 </Button>
@@ -115,12 +67,8 @@ class AuthForm extends Component {
         </Paper>
     }
 
-    handleChange = prop => event => {
-        this.setState({[prop]: event.target.value});
-    };
-
-    handleClickShowPassword = () => {
-        this.setState(state => ({showPassword: !state.showPassword}));
+    handlerElementSelect = (element) => {
+        this.setState({ selectedElement: element });
     };
 }
 
@@ -128,4 +76,4 @@ AuthForm.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AuthForm);
+export default AuthForm;

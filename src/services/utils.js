@@ -74,7 +74,7 @@ export const parseValueToData = (values, type) => {
             return values.map((project, index) => ({value: project[0], label: project[1], color: project[2]}) );
 
         case "elements":
-            return values.map((element, index) => ({value: element[1], label: `${element[0]} - ( ${element[1]} )`, password: element[3]}) );
+            return values.map((element, index) => ({value: element[1], label: `${element[0]} - ( ${element[1]} )`}) );
 
         default:
             return values;
@@ -106,19 +106,32 @@ export const parseValueToSheet = (values, type) => {
 /**
  * Redirect to login if no authenticated
  */
-export const PrivateRoute = ({component: Component, ...rest}) => (
+export const PrivateRoute = ({component: Component, redirectTo, ...rest}) => (
     <Route
         {...rest}
         render={props =>
-            localStorage.getItem("element") ? (
-                <Component {...props} />
-            ) : (
-                <Redirect
-                    to={{
-                        pathname: "/login",
-                        state: {from: props.location}
-                    }}
-                />
+            redirectTo === "/login" ? (
+                localStorage.getItem("element") ? (
+                    <Component {...props} />
+                ) : (
+                    <Redirect
+                        to={{
+                            pathname: redirectTo,
+                            state: {from: props.location}
+                        }}
+                    />
+                )
+            ) : redirectTo === "/" && (
+                localStorage.getItem("element") ? (
+                    <Redirect
+                        to={{
+                            pathname: redirectTo,
+                            state: {from: props.location}
+                        }}
+                    />
+                ) : (
+                    <Component {...props} />
+                )
             )}
     />
 );

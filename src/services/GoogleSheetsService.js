@@ -27,7 +27,7 @@ export class GoogleSheetsService {
      */
     getElements() {
         const sheetName = "Elements";
-        const range = "A2:D4";
+        const range = "A2:C4";
 
         return this.init().then(googleInstance =>
             googleInstance
