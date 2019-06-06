@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import {
     Avatar,
@@ -80,9 +79,5 @@ class AuthForm extends Component {
         this.props.history.push(path);
     }
 }
-
-AuthForm.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default withRouter(AuthForm);

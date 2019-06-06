@@ -6,7 +6,7 @@ import "./style.css";
 
 export default () => {
     return (
-        <div className="screen">
+        <div className="login-screen">
             <div className="form">
                 <AuthForm />
             </div>

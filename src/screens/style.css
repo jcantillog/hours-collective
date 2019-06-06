@@ -1,8 +1,18 @@
-:root {
-  --primary-text-color: white;
+.home-screen {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 10px;
+  align-items: center;
+  height: 100%;
 }
 
-.main-content {
-  margin: 0 auto;
-  max-width: 20em;
+.home-screen > .projects {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / span 1;
+}
+.home-screen > .list {
+  display: flex;
+  justify-content: center;
+  grid-column: 2 / span 1;
 }

@@ -1,0 +1,24 @@
+.paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.paper > .typography {
+    margin-bottom: 15px;
+}
+
+.paper > .select-projects {
+    width: 400px;
+    margin-bottom: 1em;
+    z-index: 5;
+}
+
+.paper > .hours {
+    margin: 15px;
+}
+
+.paper > .submit {
+    margin-bottom: 5px;
+}
