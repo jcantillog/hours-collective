@@ -20,5 +20,52 @@
 }
 
 .paper > .submit {
-    margin-bottom: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+.paper > .submit-gone {
+    animation: fadeOut 1.5 linear;
+}
+
+.paper > .submit-success {
+    animation: fadeIn 1s linear;
+}
+
+.spinner {
+    color: var(--success);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(0.9);
+        opacity: 0.75;
+    }
+    75% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
 }

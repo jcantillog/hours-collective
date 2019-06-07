@@ -1,11 +1,15 @@
 import React, {Component} from "react";
 import Select from "react-select";
 import chroma from "chroma-js";
+import PropTypes from "prop-types";
 /* Components */
 import {
     Button,
-    TextField
+    TextField,
+    CircularProgress,
+    Fab
 } from "@material-ui/core";
+import CheckIcon from '@material-ui/icons/Check';
 /* Style */
 import "./style.css";
 /* Services */
@@ -15,7 +19,10 @@ import {Paper, Typography} from "@material-ui/core";
 class HoursRegister extends Component {
     state = {
         projects: [],
-        selectedElement: null
+        selectedProject: null,
+        hoursWorked: null,
+        loading: false,
+        success: false
     };
     GoogleSheets = new GoogleSheetsService();
 
@@ -24,7 +31,8 @@ class HoursRegister extends Component {
     }
 
     render() {
-        const { projects } = this.state;
+        const { projects, selectedProject, hoursWorked, loading, success } = this.state;
+        const { elemento } = this.props;
         const dot = (color = '#ccc') => ({
             alignItems: 'center',
             display: 'flex',
@@ -66,14 +74,15 @@ class HoursRegister extends Component {
             singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
         };
 
-        return <Paper style={{}} className="paper">
+        return <Paper style={{ border: `1px solid ${selectedProject ? selectedProject.color : 'white'}` }}
+                      className="paper">
             <Typography component="h1" variant="h5" className="typography">
-                Welcome, {localStorage.getItem("element")}
+                Welcome, {elemento}
             </Typography>
             <Typography component="p" className="typography">
                 Please, enter the number of hours worked
             </Typography>
-            <Select className="|select-projects"
+            <Select className="select-projects"
                     placeholder="Select a project..."
                     isDisabled={false}
                     isLoading={false}
@@ -83,6 +92,14 @@ class HoursRegister extends Component {
                     name="project"
                     options={projects}
                     styles={colourStyles}
+                    theme={theme => ({
+                        ...theme,
+                        colors: {
+                            ...theme.colors,
+                            primary: '#303f9f',
+                        },
+                    })}
+                    onChange={(project) => this.handlerProjectSelect(project ? project : null)}
             />
             <TextField
                 className="hours"
@@ -96,14 +113,50 @@ class HoursRegister extends Component {
                 InputLabelProps={{
                     shrink: true,
                 }}
+                onChange={(hours) => this.handlerHoursWorked(hours.target.value)}
             />
-            <Button className="submit"
-                    variant="contained"
-                    color="primary">
-                Enter hours
-            </Button>
+            {success ? (
+                <Fab
+                    aria-label="success"
+                    color="primary"
+                    className="submit-success"
+                    style={{ backgroundColor: selectedProject.color }}
+                >
+                    <CheckIcon />
+                </Fab>
+            ) : (
+                <Button className={`submit ${loading ? 'submit-gone' : ''}`}
+                        variant="contained"
+                        color="primary"
+                        disabled={!selectedProject || !hoursWorked || loading}
+                        onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, elemento)}>
+                    Enter hours
+                    {loading && <CircularProgress size={24} className="spinner"/>}
+                </Button>
+            )}
         </Paper>
     }
+
+    handlerProjectSelect = (project) => this.setState({ selectedProject: project });
+
+    handlerHoursWorked = (hours) => this.setState({ hoursWorked: (hours !== "" ? hours : null) });
+
+    handlerHoursSubmit = (selectedProject, hoursWorked, elemento) => {
+        this.setState({ loading: true });
+        setTimeout(() => {
+            console.log(`The elemento ${elemento} has entered ${hoursWorked} hours to ${selectedProject.label}`);
+            this.setState({ success: true });
+            setTimeout(() => {
+                this.setState({ success: false });
+                this.setState({ loading: false });
+                console.log("TODO FALSE");
+            }, 1500);
+        }, 1500);
+    };
 }
+
+HoursRegister.propTypes = {
+    elemento: PropTypes.string.isRequired
+};
 
 export default HoursRegister;

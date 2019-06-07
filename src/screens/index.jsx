@@ -10,7 +10,7 @@ export default ({ location }) => {
       <Layout header="Hours Collective">
           <div className="home-screen">
               <div className="projects">
-                  <HoursRegister />
+                  <HoursRegister elemento={localStorage.getItem("element")}/>
               </div>
               <div className="list">
                   List
