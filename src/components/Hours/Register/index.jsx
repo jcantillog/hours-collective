@@ -99,6 +99,7 @@ class HoursRegister extends Component {
                             primary: '#303f9f',
                         },
                     })}
+                    value={selectedProject}
                     onChange={(project) => this.handlerProjectSelect(project ? project : null)}
             />
             <TextField
@@ -113,6 +114,7 @@ class HoursRegister extends Component {
                 InputLabelProps={{
                     shrink: true,
                 }}
+                value={hoursWorked ? hoursWorked : ""}
                 onChange={(hours) => this.handlerHoursWorked(hours.target.value)}
             />
             {success ? (
@@ -147,11 +149,16 @@ class HoursRegister extends Component {
             console.log(`The elemento ${elemento} has entered ${hoursWorked} hours to ${selectedProject.label}`);
             this.setState({ success: true });
             setTimeout(() => {
-                this.setState({ success: false });
-                this.setState({ loading: false });
-                console.log("TODO FALSE");
+                this.handlerReset();
             }, 1500);
         }, 1500);
+    };
+
+    handlerReset = () => {
+        this.setState({ success: false });
+        this.setState({ loading: false });
+        this.setState({ hoursWorked: null });
+        this.setState({ selectedProject: null });
     };
 }
 
