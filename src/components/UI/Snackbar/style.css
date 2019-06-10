@@ -1,0 +1,24 @@
+.snackbar-icon {
+    font-size: 20px
+}
+.snackbar-icon-variant {
+    opacity: 0.9;
+    margin-right: 1px;
+}
+.snackbar-message {
+    display: flex;
+    align-items: center;
+}
+/* Colors */
+.snackbar-success {
+    background-color: var(--success);
+}
+.snackbar-error {
+    background-color: var(--error);
+}
+.snackbar-info {
+    background-color: var(--info);
+}
+.snackbar-warning {
+    background-color: var(--warning);
+}

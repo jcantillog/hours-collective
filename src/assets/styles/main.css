@@ -6,7 +6,10 @@
   --border-black-14: rgba(0, 0, 0, 0.36);
   --primary-bg: #fff;
   --primary-text: rgba(33, 37, 41, 1);
-  --success: #4caf50;
+  --success: #43a047;
+  --error: #d32f2f;
+  --info: #1769AA;
+  --warning: #ffa000;
 
   /* Borders */
   --primary-border-radius: 2px;

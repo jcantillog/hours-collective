@@ -7,9 +7,10 @@ import {
     Button,
     TextField,
     CircularProgress,
-    Fab
+    Fab, Snackbar
 } from "@material-ui/core";
 import CheckIcon from '@material-ui/icons/Check';
+import SnackbarContentWrapper from '../../UI/Snackbar';
 /* Style */
 import "./style.css";
 /* Services */
@@ -22,7 +23,8 @@ class HoursRegister extends Component {
         selectedProject: null,
         hoursWorked: null,
         loading: false,
-        success: false
+        success: false,
+        openSnack: false
     };
     GoogleSheets = new GoogleSheetsService();
 
@@ -31,7 +33,7 @@ class HoursRegister extends Component {
     }
 
     render() {
-        const { projects, selectedProject, hoursWorked, loading, success } = this.state;
+        const { projects, selectedProject, hoursWorked, loading, success, openSnack } = this.state;
         const { elemento } = this.props;
         const dot = (color = '#ccc') => ({
             alignItems: 'center',
@@ -127,14 +129,31 @@ class HoursRegister extends Component {
                     <CheckIcon />
                 </Fab>
             ) : (
-                <Button className={`submit ${loading ? 'submit-gone' : ''}`}
-                        variant="contained"
-                        color="primary"
-                        disabled={!selectedProject || !hoursWorked || loading}
-                        onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, elemento)}>
-                    Enter hours
-                    {loading && <CircularProgress size={24} className="spinner"/>}
-                </Button>
+                <div>
+                    <Button className={`submit ${loading ? 'submit-gone' : ''}`}
+                            variant="contained"
+                            color="primary"
+                            disabled={!selectedProject || !hoursWorked || loading}
+                            onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, elemento)}>
+                        Enter hours
+                        {loading && <CircularProgress size={24} className="spinner"/>}
+                    </Button>
+                    <Snackbar
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        open={openSnack}
+                        autoHideDuration={6000}
+                        onClose={this.handlerClose}
+                    >
+                        <SnackbarContentWrapper
+                            variant="success"
+                            /*className={classes.margin}*/
+                            message="This is a success message!"
+                        />
+                    </Snackbar>
+                </div>
             )}
         </Paper>
     }
@@ -155,6 +174,7 @@ class HoursRegister extends Component {
         }).then(() => {
             console.log(`Hey ${elemento}, you've entered ${hoursWorked} hours to ${selectedProject.label}`);
             this.setState({ success: true });
+            this.setState({ openSnack: true });
             setTimeout(() => {
                 this.handlerReset();
             }, 1500);
@@ -166,6 +186,14 @@ class HoursRegister extends Component {
         this.setState({ loading: false });
         this.setState({ hoursWorked: null });
         this.setState({ selectedProject: null });
+    };
+
+    handlerClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        this.setState({ openSnack: false });
     };
 }
 
