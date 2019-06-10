@@ -145,13 +145,20 @@ class HoursRegister extends Component {
 
     handlerHoursSubmit = (selectedProject, hoursWorked, elemento) => {
         this.setState({ loading: true });
-        setTimeout(() => {
-            console.log(`The elemento ${elemento} has entered ${hoursWorked} hours to ${selectedProject.label}`);
+        this.GoogleSheets.addSingleRegistry({
+            year: "2019",
+            month: "6",
+            day: "10",
+            project: selectedProject.label,
+            hours: hoursWorked,
+            element: elemento
+        }).then(() => {
+            console.log(`Hey ${elemento}, you've entered ${hoursWorked} hours to ${selectedProject.label}`);
             this.setState({ success: true });
             setTimeout(() => {
                 this.handlerReset();
             }, 1500);
-        }, 1500);
+        });
     };
 
     handlerReset = () => {

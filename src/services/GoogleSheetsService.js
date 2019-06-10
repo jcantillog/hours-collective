@@ -38,9 +38,13 @@ export class GoogleSheetsService {
         );
     }
 
+    /**
+     * Function that add a new row with hours in Google Sheets DB
+     * @param newRegistry Object of values to be added
+     */
     addSingleRegistry(newRegistry) {
         const sheetsData = parseValueToSheet([newRegistry], "registries");
-        const sheetName = "Horas";
+        const sheetName = "Hours";
 
         return this.init().then(googleInstance =>
             googleInstance.append(

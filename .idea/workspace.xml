@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ecf074-7dfa-4882-9925-edb95c240dec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,17 +41,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="155" column="105" selection-start-line="155" selection-start-column="105" selection-end-line="155" selection-end-column="105" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#160#253#0" expanded="true" />
                 <element signature="e#1029#1371#0" />
                 <element signature="e#1403#2598#0" />
+                <element signature="e#2616#5165#0" />
                 <element signature="e#2761#2886#0" />
                 <element signature="e#2899#3031#0" />
+                <element signature="e#3044#3801#0" />
+                <element signature="e#3814#4313#0" />
                 <element signature="e#4355#4629#0" />
                 <element signature="e#4664#5133#0" />
+                <element signature="e#6075#6091#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!block;n#init#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!block;n#getProjects#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!block;n#getElements#0;n#GoogleSheetsService#0" />
               </folding>
             </state>
           </provider>
@@ -91,7 +109,6 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/routes.jsx" />
         <option value="$PROJECT_DIR$/src/components/Auth/Form/style.css" />
-        <option value="$PROJECT_DIR$/src/services/GoogleSheetsService.js" />
         <option value="$PROJECT_DIR$/src/services/utils.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Layout/index.jsx" />
         <option value="$PROJECT_DIR$/src/screens/Login/style.css" />
@@ -102,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/screens/index.jsx" />
         <option value="$PROJECT_DIR$/src/assets/styles/main.css" />
         <option value="$PROJECT_DIR$/src/components/Hours/Register/style.css" />
+        <option value="$PROJECT_DIR$/src/services/GoogleSheetsService.js" />
         <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
       </list>
     </option>
@@ -188,7 +206,7 @@
               <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
               <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,15 +271,16 @@
       <workItem from="1559706006269" duration="447000" />
       <workItem from="1559743923790" duration="9562000" />
       <workItem from="1559915025439" duration="16490000" />
-      <workItem from="1560193066836" duration="2082000" />
+      <workItem from="1560193066836" duration="3937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96139000" />
+    <option name="totallyTimeSpent" value="97994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15911485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -352,31 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!block;n#init#0;n#GoogleSheetsService#0" />
-            <element signature="n#!!block;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-          <folding>
-            <element signature="e#201#396#0" />
-            <element signature="e#524#1715#0" />
-            <element signature="e#1828#1999#0" />
-            <element signature="e#2724#3077#0" />
-            <element signature="e#3212#4073#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/Login/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -461,19 +455,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="92" column="20" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="e#201#396#0" />
+            <element signature="e#524#1715#0" />
+            <element signature="e#1828#1999#0" />
+            <element signature="e#3212#4073#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!block;n#init#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!block;n#getProjects#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!block;n#getElements#0;n#GoogleSheetsService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+        <state relative-caret-position="340">
+          <caret line="155" column="105" selection-start-line="155" selection-start-column="105" selection-end-line="155" selection-end-column="105" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#160#253#0" expanded="true" />
             <element signature="e#1029#1371#0" />
             <element signature="e#1403#2598#0" />
+            <element signature="e#2616#5165#0" />
             <element signature="e#2761#2886#0" />
             <element signature="e#2899#3031#0" />
+            <element signature="e#3044#3801#0" />
+            <element signature="e#3814#4313#0" />
             <element signature="e#4355#4629#0" />
             <element signature="e#4664#5133#0" />
+            <element signature="e#6075#6091#0" />
           </folding>
         </state>
       </provider>
