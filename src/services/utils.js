@@ -135,3 +135,11 @@ export const PrivateRoute = ({component: Component, redirectTo, ...rest}) => (
             )}
     />
 );
+
+/**
+ * Return if a date is valid or not
+ * @param date to be validated
+ */
+export const isValidDate = (date) => {
+    return date instanceof Date && !isNaN(date);
+};

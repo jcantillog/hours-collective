@@ -2,15 +2,22 @@ import React, {Component} from "react";
 import Select from "react-select";
 import chroma from "chroma-js";
 import PropTypes from "prop-types";
+import { isValidDate } from "../../../services/utils";
 /* Components */
 import {
     Button,
     TextField,
     CircularProgress,
-    Fab, Snackbar
+    Fab,
+    Snackbar
 } from "@material-ui/core";
 import CheckIcon from '@material-ui/icons/Check';
 import SnackbarContentWrapper from '../../UI/Snackbar';
+import {
+    MuiPickersUtilsProvider,
+    KeyboardDatePicker,
+} from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 /* Style */
 import "./style.css";
 /* Services */
@@ -22,6 +29,7 @@ class HoursRegister extends Component {
         projects: [],
         selectedProject: null,
         hoursWorked: null,
+        selectedDate: new Date(),
         loading: false,
         success: false,
         openSnack: false,
@@ -34,7 +42,7 @@ class HoursRegister extends Component {
     }
 
     render() {
-        const { projects, selectedProject, hoursWorked, loading, success, openSnack, successMessage } = this.state;
+        const { projects, selectedProject, hoursWorked, selectedDate, loading, success, openSnack, successMessage } = this.state;
         const { elemento } = this.props;
         const dot = (color = '#ccc') => ({
             alignItems: 'center',
@@ -105,21 +113,35 @@ class HoursRegister extends Component {
                     value={selectedProject}
                     onChange={(project) => this.handlerProjectSelect(project ? project : null)}
             />
-            <TextField
-                className="hours"
-                label="Hours"
-                type="number"
-                placeholder="Number of hours worked"
-                helperText="Try to enter whole values, please!"
-                fullWidth
-                margin="normal"
-                variant="outlined"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                value={hoursWorked ? hoursWorked : ""}
-                onChange={(hours) => this.handlerHoursWorked(hours.target.value)}
-            />
+            <div className="hours-day">
+                <TextField
+                    className="hours-day-item"
+                    label="Hours"
+                    type="number"
+                    placeholder="Number of hours worked"
+                    helperText="Try to enter whole values, please!"
+                    fullWidth
+                    margin="normal"
+                    variant="outlined"
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    value={hoursWorked ? hoursWorked : ""}
+                    onChange={(hours) => this.handlerHoursWorked(hours.target.value)}
+                />
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDatePicker
+                        className="hours-day-item"
+                        margin="normal"
+                        label="Day worked"
+                        value={selectedDate}
+                        onChange={(date) => this.handlerDateChange(date)}
+                        KeyboardButtonProps={{
+                            'aria-label': 'change date',
+                        }}
+                    />
+                </MuiPickersUtilsProvider>
+            </div>
             {success ? (
                 <Fab
                     aria-label="success"
@@ -133,8 +155,8 @@ class HoursRegister extends Component {
                 <div className={`submit ${loading ? 'submit-gone' : ''}`}>
                     <Button variant="contained"
                             color="primary"
-                            disabled={!selectedProject || !hoursWorked || loading}
-                            onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, elemento)}>
+                            disabled={!selectedProject || !hoursWorked || !selectedDate || loading}
+                            onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, selectedDate, elemento)}>
                         Enter hours
                         {loading && <CircularProgress size={24} className="spinner"/>}
                     </Button>
@@ -145,11 +167,11 @@ class HoursRegister extends Component {
                         }}
                         open={openSnack}
                         autoHideDuration={5000}
-                        onClose={this.handlerClose}
+                        onClose={this.handlerSnackbarClose}
                     >
                         <SnackbarContentWrapper
                             variant="success"
-                            onClose={this.handlerClose}
+                            onClose={this.handlerSnackbarClose}
                             message={successMessage}
                         />
                     </Snackbar>
@@ -162,12 +184,15 @@ class HoursRegister extends Component {
 
     handlerHoursWorked = (hours) => this.setState({ hoursWorked: (hours !== "" ? hours : null) });
 
-    handlerHoursSubmit = (selectedProject, hoursWorked, elemento) => {
+    handlerDateChange = (date) => this.setState({ selectedDate: (isValidDate(date) ? date : null) });
+
+    handlerHoursSubmit = (selectedProject, hoursWorked, selectedDate, elemento) => {
+        console.log();
         this.setState({ loading: true });
         this.GoogleSheets.addSingleRegistry({
-            year: "2019",
-            month: "6",
-            day: "10",
+            year: selectedDate.getFullYear(),
+            month: selectedDate.getMonth()+1,
+            day: selectedDate.getDate(),
             project: selectedProject.label,
             hours: hoursWorked,
             element: elemento
@@ -188,7 +213,7 @@ class HoursRegister extends Component {
         this.setState({ selectedProject: null });
     };
 
-    handlerClose = (event, reason) => {
+    handlerSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }

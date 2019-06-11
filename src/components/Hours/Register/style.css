@@ -10,24 +10,30 @@
 }
 
 .paper > .select-projects {
-    width: 400px;
-    margin-bottom: 1em;
+    width: 100%;
     z-index: 5;
 }
 
-.paper > .hours {
-    margin: 15px;
+.paper > .hours-day {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    width: 100%;
 }
 
-.paper > .submit {
+.paper .hours-day-item {
+    margin-right: 10px;
+    width: 50%;
+}
+
+.paper .submit {
     margin: 10px 0;
     position: relative;
 }
-.paper > .submit-gone {
+.paper .submit-gone {
     animation: fadeOut 1.5 linear;
 }
-
-.paper > .submit-success {
+.paper .submit-success {
     animation: fadeIn 1s linear;
 }
 
