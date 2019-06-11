@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ecf074-7dfa-4882-9925-edb95c240dec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="260">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -31,36 +31,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding>
-                <element signature="e#130#166#0" />
-                <element signature="e#183#233#0" />
-                <element signature="e#249#301#0" />
-                <element signature="e#320#356#0" />
-              </folding>
+            <state relative-caret-position="308">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="173" column="23" lean-forward="true" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+            <state relative-caret-position="385">
+              <caret line="146" column="47" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="47" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#160#253#0" expanded="true" />
-                <element signature="e#1029#1371#0" />
-                <element signature="e#1403#2598#0" />
-                <element signature="e#2761#2886#0" />
-                <element signature="e#2899#3031#0" />
-                <element signature="e#3044#3845#0" />
-                <element signature="e#3858#4412#0" />
-                <element signature="e#6349#6538#0" />
+                <element signature="e#1132#1474#0" />
+                <element signature="e#1506#2701#0" />
+                <element signature="e#2864#2989#0" />
+                <element signature="e#3002#3134#0" />
+                <element signature="e#3147#3948#0" />
+                <element signature="e#3961#4515#0" />
+                <element signature="e#4557#4831#0" />
+                <element signature="e#6340#6943#0" />
+                <element signature="e#6971#7160#0" />
+                <element signature="e#7201#7322#0" />
+                <element signature="e#7353#7398#0" />
               </folding>
             </state>
           </provider>
@@ -99,12 +96,12 @@
         <option value="$PROJECT_DIR$/src/screens/style.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Layout/style.css" />
         <option value="$PROJECT_DIR$/src/screens/index.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Hours/Register/style.css" />
         <option value="$PROJECT_DIR$/src/services/GoogleSheetsService.js" />
         <option value="$PROJECT_DIR$/src/assets/styles/main.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Hours/Register/style.css" />
         <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" />
       </list>
     </option>
   </component>
@@ -221,11 +218,12 @@
       <workItem from="1559743923790" duration="9562000" />
       <workItem from="1559915025439" duration="16490000" />
       <workItem from="1560193066836" duration="7524000" />
+      <workItem from="1560260249421" duration="4265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101581000" />
+    <option name="totallyTimeSpent" value="105846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -245,7 +243,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29658213" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.16979052" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -404,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Button/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -431,10 +422,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/SnackbarContent/SnackbarContent.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#613#766#0" />
+            <element signature="e#768#1061#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="146" column="47" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1132#1474#0" />
+            <element signature="e#1506#2701#0" />
+            <element signature="e#2864#2989#0" />
+            <element signature="e#3002#3134#0" />
+            <element signature="e#3147#3948#0" />
+            <element signature="e#3961#4515#0" />
+            <element signature="e#4557#4831#0" />
+            <element signature="e#6340#6943#0" />
+            <element signature="e#6971#7160#0" />
+            <element signature="e#7201#7322#0" />
+            <element signature="e#7353#7398#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="260">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -443,32 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#130#166#0" />
-            <element signature="e#183#233#0" />
-            <element signature="e#249#301#0" />
-            <element signature="e#320#356#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="173" column="23" lean-forward="true" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#160#253#0" expanded="true" />
-            <element signature="e#1029#1371#0" />
-            <element signature="e#1403#2598#0" />
-            <element signature="e#2761#2886#0" />
-            <element signature="e#2899#3031#0" />
-            <element signature="e#3044#3845#0" />
-            <element signature="e#3858#4412#0" />
-            <element signature="e#6349#6538#0" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -20,11 +20,11 @@ const variantIcon = {
     info: InfoIcon,
 };
 
-const SnackbarContentWrapper = ({className, variant, message, onClose, ...other}) => {
+const SnackbarContentWrapper = ({variant, message, onClose, ...other}) => {
     const Icon = variantIcon[variant];
     return (
         <SnackbarContent
-            className={`snackbar-${variant} ${className}`}
+            className={`snackbar-${variant}`}
             aria-describedby="client-snackbar"
             message={
                 <span id="client-snackbar" className="snackbar-message">

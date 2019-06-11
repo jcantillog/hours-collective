@@ -3,7 +3,7 @@
 }
 .snackbar-icon-variant {
     opacity: 0.9;
-    margin-right: 1px;
+    margin-right: 10px;
 }
 .snackbar-message {
     display: flex;
@@ -11,14 +11,14 @@
 }
 /* Colors */
 .snackbar-success {
-    background-color: var(--success);
+    background-color: var(--success) !important;
 }
 .snackbar-error {
-    background-color: var(--error);
+    background-color: var(--error) !important;
 }
 .snackbar-info {
-    background-color: var(--info);
+    background-color: var(--info) !important;
 }
 .snackbar-warning {
-    background-color: var(--warning);
+    background-color: var(--warning) !important;
 }

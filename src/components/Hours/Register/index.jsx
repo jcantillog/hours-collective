@@ -24,7 +24,8 @@ class HoursRegister extends Component {
         hoursWorked: null,
         loading: false,
         success: false,
-        openSnack: false
+        openSnack: false,
+        successMessage: ""
     };
     GoogleSheets = new GoogleSheetsService();
 
@@ -33,7 +34,7 @@ class HoursRegister extends Component {
     }
 
     render() {
-        const { projects, selectedProject, hoursWorked, loading, success, openSnack } = this.state;
+        const { projects, selectedProject, hoursWorked, loading, success, openSnack, successMessage } = this.state;
         const { elemento } = this.props;
         const dot = (color = '#ccc') => ({
             alignItems: 'center',
@@ -129,9 +130,8 @@ class HoursRegister extends Component {
                     <CheckIcon />
                 </Fab>
             ) : (
-                <div>
-                    <Button className={`submit ${loading ? 'submit-gone' : ''}`}
-                            variant="contained"
+                <div className={`submit ${loading ? 'submit-gone' : ''}`}>
+                    <Button variant="contained"
                             color="primary"
                             disabled={!selectedProject || !hoursWorked || loading}
                             onClick={() => this.handlerHoursSubmit(selectedProject, hoursWorked, elemento)}>
@@ -144,13 +144,13 @@ class HoursRegister extends Component {
                             horizontal: 'left',
                         }}
                         open={openSnack}
-                        autoHideDuration={6000}
+                        autoHideDuration={5000}
                         onClose={this.handlerClose}
                     >
                         <SnackbarContentWrapper
                             variant="success"
-                            /*className={classes.margin}*/
-                            message="This is a success message!"
+                            onClose={this.handlerClose}
+                            message={successMessage}
                         />
                     </Snackbar>
                 </div>
@@ -172,7 +172,7 @@ class HoursRegister extends Component {
             hours: hoursWorked,
             element: elemento
         }).then(() => {
-            console.log(`Hey ${elemento}, you've entered ${hoursWorked} hours to ${selectedProject.label}`);
+            this.setState({ successMessage: `Hey ${elemento}, you've registered ${hoursWorked} hours with ${selectedProject.label}` });
             this.setState({ success: true });
             this.setState({ openSnack: true });
             setTimeout(() => {
