@@ -9,44 +9,55 @@ const googleSheetsConfig = {
     discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
     scope: "https://www.googleapis.com/auth/spreadsheets"
 };
+let loaded = false;
+const loadFunc = (resolve, reject) => {
+    const interfaceAPI = {
+        read: gapi.client.sheets.spreadsheets.values.get,
+        append: gapi.client.sheets.spreadsheets.values.append
+    };
+
+    // Check out if exits a active session
+    if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        loaded = true;
+
+        resolve(
+            interfaceAPI,
+            gapi.auth2
+                .getAuthInstance()
+                .currentUser.get()
+                .getBasicProfile()
+        );
+    } else {
+        gapi.auth2.getAuthInstance().signIn();
+    }
+
+    // Adds an event listener to resolve the promise when the user sign-in
+    gapi.auth2.getAuthInstance().isSignedIn.listen(isSignedIn => {
+        if (!isSignedIn) reject();
+
+        loaded = true;
+
+        resolve(
+            interfaceAPI,
+            gapi.auth2
+                .getAuthInstance()
+                .currentUser.get()
+                .getBasicProfile()
+        );
+    });
+};
 
 /**
  * Inits the google APIs client with Google Sheets Config
  */
 export const initClient = (config = googleSheetsConfig) => {
+    console.log(loaded);
     return new Promise((resolve, reject) => {
-        load(config).then(() => {
-            const interfaceAPI = {
-                read: gapi.client.sheets.spreadsheets.values.get,
-                append: gapi.client.sheets.spreadsheets.values.append
-            };
-
-            // Check out if exits a active session
-            if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
-                resolve(
-                    interfaceAPI,
-                    gapi.auth2
-                        .getAuthInstance()
-                        .currentUser.get()
-                        .getBasicProfile()
-                );
-            } else {
-                gapi.auth2.getAuthInstance().signIn();
-            }
-
-            // Adds an event listener to resolve the promise when the user sign-in
-            gapi.auth2.getAuthInstance().isSignedIn.listen(isSignedIn => {
-                if (!isSignedIn) reject();
-
-                resolve(
-                    interfaceAPI,
-                    gapi.auth2
-                        .getAuthInstance()
-                        .currentUser.get()
-                        .getBasicProfile()
-                );
-            });
-        });
+        if (loaded) {
+            loadFunc(resolve, reject);
+        } else {
+            load(config).then(() => loadFunc(resolve, reject));
+        }
     });
 };
 
@@ -75,6 +86,9 @@ export const parseValueToData = (values, type) => {
 
         case "elements":
             return values.map((element, index) => ({value: element[1], label: `${element[0]} - ( ${element[1]} )`}) );
+
+        case "hours":
+            return values.map((hour, index) => ({year: hour[0], month: hour[1], day: hour[2], project: hour[3], hours: hour[4], element: hour[5]}) );
 
         default:
             return values;

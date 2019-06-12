@@ -9,6 +9,7 @@
     "@material-ui/pickers": "^3.1.0",
     "chroma-js": "^2.0.3",
     "date-fns": "^2.0.0-alpha.27",
+    "material-table": "^1.39.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",

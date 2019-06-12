@@ -1,7 +1,7 @@
 import {SPREADSHEET_ID} from "../config/constants.config";
 import {initClient, parseValueToData, parseValueToSheet} from "./utils";
 
-export class GoogleSheetsService {
+class GoogleSheetsService {
     init() {
         return initClient();
     }
@@ -39,6 +39,22 @@ export class GoogleSheetsService {
     }
 
     /**
+     * Function that returns the hours list stored in Google Sheets DB
+     */
+    getHoursList() {
+        const sheetName = "Hours";
+        const range = "A1:F";
+
+        return this.init().then(googleInstance =>
+            googleInstance
+                .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
+                .then(response => {
+                    return parseValueToData(response.result.values ? response.result.values : [], 'hours');
+                })
+        );
+    }
+
+    /**
      * Function that add a new row with hours in Google Sheets DB
      * @param newRegistry Object of values to be added
      */
@@ -60,4 +76,4 @@ export class GoogleSheetsService {
     }
 }
 
-export default GoogleSheetsService;
+export default new GoogleSheetsService()

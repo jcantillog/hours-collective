@@ -35,10 +35,9 @@ class HoursRegister extends Component {
         openSnack: false,
         successMessage: ""
     };
-    GoogleSheets = new GoogleSheetsService();
 
     componentDidMount() {
-        this.GoogleSheets.getProjects().then(response => this.setState({projects: response}));
+        GoogleSheetsService.getProjects().then(response => this.setState({projects: response}));
     }
 
     render() {
@@ -166,7 +165,7 @@ class HoursRegister extends Component {
                             horizontal: 'left',
                         }}
                         open={openSnack}
-                        autoHideDuration={5000}
+                        autoHideDuration={3000}
                         onClose={this.handlerSnackbarClose}
                     >
                         <SnackbarContentWrapper
@@ -189,7 +188,7 @@ class HoursRegister extends Component {
     handlerHoursSubmit = (selectedProject, hoursWorked, selectedDate, elemento) => {
         console.log();
         this.setState({ loading: true });
-        this.GoogleSheets.addSingleRegistry({
+        GoogleSheetsService.prototype.addSingleRegistry({
             year: selectedDate.getFullYear(),
             month: selectedDate.getMonth()+1,
             day: selectedDate.getDate(),
