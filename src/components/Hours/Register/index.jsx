@@ -37,7 +37,7 @@ class HoursRegister extends Component {
     };
 
     componentDidMount() {
-        GoogleSheetsService.getProjects().then(response => this.setState({projects: response}));
+        GoogleSheetsService.getProjects("Register").then(response => this.setState({projects: response}));
     }
 
     render() {

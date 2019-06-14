@@ -1,18 +1,15 @@
 .home-screen {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
   grid-gap: 10px;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
 .home-screen > .projects {
-  display: flex;
-  justify-content: center;
-  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
 }
 .home-screen > .list {
-  display: flex;
-  justify-content: center;
-  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
 }

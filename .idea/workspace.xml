@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ecf074-7dfa-4882-9925-edb95c240dec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Hours/List/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hours/List/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hours/List/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hours/List/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Layout/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Layout/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GoogleSheetsService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/utils.js" afterDir="false" />
     </list>
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="216">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding>
                 <element signature="e#44#89#0" expanded="true" />
               </folding>
@@ -38,41 +38,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
+        <entry file="file://$PROJECT_DIR$/src/screens/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <element signature="n#!!block;n#getProjects#0;n#GoogleSheetsService#0" />
-                <element signature="n#!!block;n#getElements#0;n#GoogleSheetsService#0" />
-                <element signature="n#!!block;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
-              </folding>
+            <state relative-caret-position="312">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/services/utils.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Hours/List/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
               <folding>
-                <element signature="e#201#396#0" />
-                <element signature="e#1828#1999#0" />
-                <element signature="e#2184#2541#0" />
-                <element signature="e#2724#3077#0" />
-                <element signature="e#3212#4073#0" />
+                <element signature="n#!!block;n#componentDidMount#0;n#HoursList#0" />
+                <element signature="e#2656#4105#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/constants.config.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="59" selection-start-column="59" selection-end-column="59" />
+            <state relative-caret-position="480">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#617#689#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+                <element signature="n#!!doc;n#getProjects#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!doc;n#getElements#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!block;n#getElements#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!doc;n#getHoursList#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!doc;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
+                <element signature="n#!!block;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1272">
+              <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+              <folding>
+                <element signature="e#201#396#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,21 +132,21 @@
         <option value="$PROJECT_DIR$/src/components/Auth/Form/style.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Layout/index.jsx" />
         <option value="$PROJECT_DIR$/src/screens/Login/style.css" />
-        <option value="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" />
         <option value="$PROJECT_DIR$/src/screens/Login/index.jsx" />
-        <option value="$PROJECT_DIR$/src/screens/style.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Layout/style.css" />
         <option value="$PROJECT_DIR$/src/assets/styles/main.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/style.css" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Hours/Register/style.css" />
         <option value="$PROJECT_DIR$/src/screens/index.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Hours/List/index.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
         <option value="$PROJECT_DIR$/src/services/GoogleSheetsService.js" />
+        <option value="$PROJECT_DIR$/src/components/Auth/Form/index.jsx" />
         <option value="$PROJECT_DIR$/src/services/utils.js" />
+        <option value="$PROJECT_DIR$/src/screens/style.css" />
+        <option value="$PROJECT_DIR$/src/components/UI/Layout/style.css" />
+        <option value="$PROJECT_DIR$/src/components/Hours/List/index.jsx" />
       </list>
     </option>
   </component>
@@ -129,10 +154,10 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2119" />
-    <option name="y" value="-10" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="2156" />
+    <option name="y" value="-20" />
+    <option name="width" value="1377" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,41 +182,6 @@
               <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
               <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Hours" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Hours" type="462c0819:PsiDirectoryNode" />
-              <item name="List" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Hours" type="462c0819:PsiDirectoryNode" />
-              <item name="Register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,24 +261,25 @@
       <workItem from="1560193066836" duration="7524000" />
       <workItem from="1560260249421" duration="14347000" />
       <workItem from="1560289761268" duration="604000" />
-      <workItem from="1560345741835" duration="12524000" />
+      <workItem from="1560345741835" duration="13506000" />
+      <workItem from="1560433063467" duration="10694000" />
+      <workItem from="1560520560828" duration="2737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129056000" />
+    <option name="totallyTimeSpent" value="143469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15911485" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49872124" visible="true" weight="0.15911485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="npm" order="2" sideWeight="0.50127876" side_tool="true" weight="0.15911485" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24035281" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -308,18 +299,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Button/Button.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -351,41 +330,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Layout/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Layout/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="43" selection-start-line="43" selection-end-line="46" selection-end-column="2" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="74" column="6" selection-start-line="71" selection-start-column="4" selection-end-line="74" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -470,6 +420,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/constants.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -477,27 +437,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hours/List/index.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Layout/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        <state relative-caret-position="72">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/src/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#44#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        <state relative-caret-position="480">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#617#689#0" expanded="true" />
@@ -505,24 +500,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#44#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/GoogleSheetsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="360">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
-            <element signature="n#!!block;n#getProjects#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!doc;n#getProjects#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!doc;n#getElements#0;n#GoogleSheetsService#0" />
             <element signature="n#!!block;n#getElements#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!doc;n#getHoursList#0;n#GoogleSheetsService#0" />
+            <element signature="n#!!doc;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
             <element signature="n#!!block;n#addSingleRegistry#0;n#GoogleSheetsService#0" />
           </folding>
         </state>
@@ -530,14 +518,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="1272">
+          <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
           <folding>
             <element signature="e#201#396#0" />
-            <element signature="e#1828#1999#0" />
-            <element signature="e#2184#2541#0" />
-            <element signature="e#2724#3077#0" />
-            <element signature="e#3212#4073#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hours/List/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!block;n#componentDidMount#0;n#HoursList#0" />
+            <element signature="e#2656#4105#0" />
           </folding>
         </state>
       </provider>

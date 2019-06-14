@@ -2,18 +2,18 @@ import {SPREADSHEET_ID} from "../config/constants.config";
 import {initClient, parseValueToData, parseValueToSheet} from "./utils";
 
 class GoogleSheetsService {
-    init() {
-        return initClient();
+    init(test) {
+        return initClient(test);
     }
 
     /**
      * Function that returns the projects stored in Google Sheets DB
      */
-    getProjects() {
+    getProjects(test) {
         const sheetName = "Projects";
         const range = "A2:C4";
 
-        return this.init().then(googleInstance =>
+        return this.init(test).then(googleInstance =>
             googleInstance
                 .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
                 .then(response => {
@@ -25,7 +25,7 @@ class GoogleSheetsService {
     /**
      * Function that returns the elements stored in Google Sheets DB
      */
-    getElements() {
+    getElements(test) {
         const sheetName = "Elements";
         const range = "A2:C4";
 
@@ -41,11 +41,11 @@ class GoogleSheetsService {
     /**
      * Function that returns the hours list stored in Google Sheets DB
      */
-    getHoursList() {
+    getHoursList(test) {
         const sheetName = "Hours";
         const range = "A1:F";
 
-        return this.init().then(googleInstance =>
+        return this.init(test).then(googleInstance =>
             googleInstance
                 .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
                 .then(response => {

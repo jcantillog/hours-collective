@@ -22,10 +22,9 @@ class AuthForm extends Component {
         elements: [],
         selectedElement: null
     };
-    GoogleSheets = new GoogleSheetsService();
 
     componentDidMount() {
-        this.GoogleSheets.getElements().then(response => this.setState({elements: response}));
+        GoogleSheetsService.getElements().then(response => this.setState({elements: response}));
     }
 
     render() {
