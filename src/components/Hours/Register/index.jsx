@@ -1,15 +1,19 @@
+/* Basic */
 import React, {Component} from "react";
 import Select from "react-select";
 import chroma from "chroma-js";
 import PropTypes from "prop-types";
-import { isValidDate } from "../../../services/utils";
+/* Animations */
+import { fadeInDown } from 'react-animations';
 /* Components */
 import {
     Button,
     TextField,
     CircularProgress,
     Fab,
-    Snackbar
+    Snackbar,
+    Paper,
+    Typography
 } from "@material-ui/core";
 import CheckIcon from '@material-ui/icons/Check';
 import SnackbarContentWrapper from '../../UI/Snackbar';
@@ -18,11 +22,18 @@ import {
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-/* Style */
-import "./style.css";
 /* Services */
 import GoogleSheetsService from "../../../services/GoogleSheetsService";
-import {Paper, Typography} from "@material-ui/core";
+import { isValidDate } from "../../../services/utils";
+/* Style */
+import "./style.css";
+import styled, { keyframes } from 'styled-components';
+
+const bounceAnimation = keyframes`${fadeInDown}`;
+
+const BouncyDiv = styled.div`
+  animation: 1s ${bounceAnimation};
+`;
 
 class HoursRegister extends Component {
     state = {
@@ -92,7 +103,7 @@ class HoursRegister extends Component {
             <Typography component="p" className="typography">
                 Please, enter the number of hours worked
             </Typography>
-            <Select className="select-projects"
+            {/*<Select className="select-projects"
                     placeholder="Select a project..."
                     isDisabled={false}
                     isLoading={false}
@@ -175,7 +186,7 @@ class HoursRegister extends Component {
                         />
                     </Snackbar>
                 </div>
-            )}
+            )}*/}
         </Paper>
     }
 

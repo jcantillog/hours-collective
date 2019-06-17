@@ -11,6 +11,7 @@
     "date-fns": "^2.0.0-alpha.27",
     "material-table": "^1.39.0",
     "react": "^16.8.6",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
