@@ -28,7 +28,7 @@ class HoursList extends Component {
             { title: 'Month', field: 'month', type: 'numeric'},
             { title: 'Day', field: 'day', type: 'numeric' },
             { title: 'Hours', field: 'hours', type: 'numeric', grouping: false, filtering: false},
-            { title: 'Elemento', field: 'element', sorting: false, grouping: false, filtering: false}
+            { title: 'Element', field: 'element', sorting: false, grouping: false, filtering: false}
         ],
         options: {
             search: false,
