@@ -15,7 +15,7 @@ import Select from "react-select";
 /* Style */
 import "./style.css";
 /* Services */
-import GoogleSheetsService from "../../../services/GoogleSheetsService";
+import {sheetMethod, SheetsFactory} from "../../../services/Factories/SheetsFactory";
 
 class AuthForm extends Component {
     state = {
@@ -24,7 +24,11 @@ class AuthForm extends Component {
     };
 
     componentDidMount() {
-        GoogleSheetsService.getElements().then(response => this.setState({elements: response}));
+        SheetsFactory
+            .getSheetsFactory(sheetMethod.GOOGLE_API)
+            .getSheetsService()
+            .getElements()
+            .then(response => this.setState({elements: response}));
     }
 
     render() {

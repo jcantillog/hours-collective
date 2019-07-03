@@ -1,5 +1,21 @@
 import React from "react";
 import {Redirect, Route} from "react-router-dom";
+import {GoogleSheetsFactory} from "./Factories/GoogleSheetsFactory";
+import {SHEET_METHOD} from "../config/constants.config";
+
+/**
+ * Returns the factory in charge of set the selected sheets enviroment
+ * Data model
+ * @param {String} method
+ */
+export const getSheetsFactory = (method) => {
+    switch (method) {
+        case SHEET_METHOD.GOOGLE_API:
+            return new GoogleSheetsFactory();
+        default:
+            return new GoogleSheetsFactory();
+    }
+};
 
 /**
  * Parses the array value response from Google Sheets API to

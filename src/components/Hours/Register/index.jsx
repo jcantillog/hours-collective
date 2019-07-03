@@ -23,11 +23,11 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 /* Services */
-import GoogleSheetsService from "../../../services/GoogleSheetsService";
 import { isValidDate } from "../../../services/utils";
 /* Style */
 import "./style.css";
 import styled, { keyframes } from 'styled-components';
+import {SHEET_FACTORY} from "../../../config/enviroment.config";
 
 const bounceAnimation = keyframes`${fadeInDown}`;
 
@@ -48,7 +48,9 @@ class HoursRegister extends Component {
     };
 
     componentDidMount() {
-        GoogleSheetsService.getProjects("Register").then(response => this.setState({projects: response}));
+        SHEET_FACTORY
+            .getProjects("Register")
+            .then(response => this.setState({projects: response}));
     }
 
     render() {
@@ -199,21 +201,22 @@ class HoursRegister extends Component {
     handlerHoursSubmit = (selectedProject, hoursWorked, selectedDate, elemento) => {
         console.log();
         this.setState({ loading: true });
-        GoogleSheetsService.prototype.addSingleRegistry({
-            year: selectedDate.getFullYear(),
-            month: selectedDate.getMonth()+1,
-            day: selectedDate.getDate(),
-            project: selectedProject.label,
-            hours: hoursWorked,
-            element: elemento
-        }).then(() => {
-            this.setState({ successMessage: `Hey ${elemento}, you've registered ${hoursWorked} hours with ${selectedProject.label}` });
-            this.setState({ success: true });
-            this.setState({ openSnack: true });
-            setTimeout(() => {
-                this.handlerReset();
-            }, 1500);
-        });
+        SHEET_FACTORY
+            .addSingleRegistry({
+                year: selectedDate.getFullYear(),
+                month: selectedDate.getMonth()+1,
+                day: selectedDate.getDate(),
+                project: selectedProject.label,
+                hours: hoursWorked,
+                element: elemento
+            }).then(() => {
+                this.setState({ successMessage: `Hey ${elemento}, you've registered ${hoursWorked} hours with ${selectedProject.label}` });
+                this.setState({ success: true });
+                this.setState({ openSnack: true });
+                setTimeout(() => {
+                    this.handlerReset();
+                }, 1500);
+            });
     };
 
     handlerReset = () => {

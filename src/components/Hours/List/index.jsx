@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import MaterialTable from 'material-table';
+import {SHEET_FACTORY} from "../../../config/enviroment.config";
 /* Style */
 import "./style.css";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 /* Services */
-import GoogleSheetsService from "../../../services/GoogleSheetsService";
 
 class HoursList extends Component {
     constructor(props) {
@@ -68,7 +68,9 @@ class HoursList extends Component {
     };
 
     componentDidMount() {
-        GoogleSheetsService.getHoursList("Hours").then(response => this.setState({data: response}));
+        SHEET_FACTORY
+            .getHoursList("Hours")
+            .then(response => this.setState({data: response}));
     }
 
     render() {

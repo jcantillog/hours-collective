@@ -2,6 +2,10 @@ import {CLIENT_ID, GOOGLE_API_KEY, SPREADSHEET_ID} from "../config/constants.con
 import {parseValueToData, parseValueToSheet} from "./utils";
 import { SheetsService } from "./SheetsService";
 
+declare global {
+    interface Window { gapi: any; }
+}
+
 const gapi = window.gapi;
 const googleSheetsConfig = {
     apiKey: GOOGLE_API_KEY,
@@ -10,16 +14,12 @@ const googleSheetsConfig = {
     scope: "https://www.googleapis.com/auth/spreadsheets"
 };
 
-export class GoogleSheetsService extends SheetsService{
-
-    constructor(){
-        super();
-    }
+export class GoogleSheetsService implements SheetsService{
 
     /**
      * Inits the google APIs client with Google Sheets Config
      */
-    initClient = (config = googleSheetsConfig) => {
+    private initClient = (config = googleSheetsConfig) => {
         return new Promise((resolve, reject) => {
             this.load(config).then(() => {
                 const interfaceAPI = {
@@ -31,6 +31,7 @@ export class GoogleSheetsService extends SheetsService{
                 if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
                     resolve(
                         interfaceAPI,
+                        // @ts-ignore
                         gapi.auth2
                             .getAuthInstance()
                             .currentUser.get()
@@ -43,9 +44,9 @@ export class GoogleSheetsService extends SheetsService{
                 // Adds an event listener to resolve the promise when the user sign-in
                 gapi.auth2.getAuthInstance().isSignedIn.listen(isSignedIn => {
                     if (!isSignedIn) reject();
-
                     resolve(
                         interfaceAPI,
+                        // @ts-ignore
                         gapi.auth2
                             .getAuthInstance()
                             .currentUser.get()
@@ -60,7 +61,7 @@ export class GoogleSheetsService extends SheetsService{
      * Loads the initial config to use google sheets API
      * @param {Object} config
      */
-    load = config => {
+    private load = config => {
         return new Promise((resolve, reject) => {
             gapi.load("client:auth2", () => {
                 gapi.client.init(config).then(() => resolve());
@@ -77,10 +78,11 @@ export class GoogleSheetsService extends SheetsService{
         const sheetName = "Projects";
         const range = "A2:C4";
 
-        return this.initClient().then(googleInstance =>
+        return this.initClient().then((googleInstance: any) =>
             googleInstance
+            // @ts-ignore
                 .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
-                .then(response => {
+                .then((response: any) => {
                     return parseValueToData(response.result.values, 'projects');
                 })
         );
@@ -93,10 +95,11 @@ export class GoogleSheetsService extends SheetsService{
         const sheetName = "Elements";
         const range = "A2:C4";
 
-        return this.initClient().then(googleInstance =>
+        return this.initClient().then((googleInstance: any) =>
             googleInstance
+            // @ts-ignore
                 .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
-                .then(response => {
+                .then((response: any) => {
                     return parseValueToData(response.result.values, 'elements');
                 })
         );
@@ -109,10 +112,11 @@ export class GoogleSheetsService extends SheetsService{
         const sheetName = "Hours";
         const range = "A1:F";
 
-        return this.initClient().then(googleInstance =>
+        return this.initClient().then((googleInstance: any) =>
             googleInstance
+            // @ts-ignore
                 .read({spreadsheetId: SPREADSHEET_ID, range: `${sheetName}!${range}`})
-                .then(response => {
+                .then((response: any) => {
                     return parseValueToData(response.result.values ? response.result.values : [], 'hours');
                 })
         );
@@ -126,7 +130,8 @@ export class GoogleSheetsService extends SheetsService{
         const sheetsData = parseValueToSheet([newRegistry], "registries");
         const sheetName = "Hours";
 
-        return this.initClient().then(googleInstance =>
+        return this.initClient().then((googleInstance: any) =>
+            // @ts-ignore
             googleInstance.append(
                 {
                     spreadsheetId: SPREADSHEET_ID,

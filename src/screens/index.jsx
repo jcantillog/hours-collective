@@ -6,7 +6,7 @@ import Layout from "../components/UI/Layout";
 import HoursRegister from "../components/Hours/Register";
 import HoursList from "../components/Hours/List";
 /* Services */
-/* Style */
+/* Styles */
 import styled from 'styled-components';
 const Screen = styled.div`
     display: grid;
