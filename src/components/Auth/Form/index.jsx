@@ -1,6 +1,7 @@
+/* Basic */
 import React, {Component} from "react";
 import { withRouter } from 'react-router-dom';
-
+/* Components */
 import {
     Avatar,
     Button,
@@ -8,14 +9,12 @@ import {
     Paper,
     Typography
 } from '@material-ui/core';
-
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Select from "react-select";
-
-/* Style */
-import "./style.css";
 /* Services */
-import {sheetMethod, SheetsFactory} from "../../../services/Factories/SheetsFactory";
+import {SHEET_FACTORY} from "../../../config/enviroment.config";
+/* Styles */
+import "./style.css";
 
 class AuthForm extends Component {
     state = {
@@ -24,11 +23,14 @@ class AuthForm extends Component {
     };
 
     componentDidMount() {
-        SheetsFactory
-            .getSheetsFactory(sheetMethod.GOOGLE_API)
-            .getSheetsService()
+        SHEET_FACTORY
             .getElements()
-            .then(response => this.setState({elements: response}));
+            .then(response => {
+                this.setState({elements: response.map((element) => {
+                        return {value: element.element, label: `${element.name} - ( ${element.element} )`}
+                    })
+                })
+            });
     }
 
     render() {

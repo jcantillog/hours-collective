@@ -2,6 +2,8 @@ import React from "react";
 import {Redirect, Route} from "react-router-dom";
 import {GoogleSheetsFactory} from "./Factories/GoogleSheetsFactory";
 import {SHEET_METHOD} from "../config/constants.config";
+import {Element} from "./Classes/Element";
+import {Project} from "./Classes/Project";
 
 /**
  * Returns the factory in charge of set the selected sheets enviroment
@@ -26,10 +28,16 @@ export const getSheetsFactory = (method) => {
 export const parseValueToData = (values, type) => {
     switch (type) {
         case "projects":
-            return values.map((project, index) => ({value: project[0], label: project[1], color: project[2]}) );
+            return values.map((project, index) => {
+                return new Project(`${project[0]}`, `${project[1]}`, `${project[2]}`);
+                // {value: , label: , color: }
+            } );
 
         case "elements":
-            return values.map((element, index) => ({value: element[1], label: `${element[0]} - ( ${element[1]} )`}) );
+            return values.map((element, index) => {
+                return new Element(`${element[0]}`, `${element[1]}`, `${element[2]}`);
+                // {value: element[1], label: `${element[0]} - ( ${element[1]} )`}
+            } );
 
         case "hours":
             return values.map((hour, index) => ({year: hour[0], month: hour[1], day: hour[2], project: hour[3], hours: hour[4], element: hour[5]}) );

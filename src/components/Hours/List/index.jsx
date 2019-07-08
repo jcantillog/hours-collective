@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import MaterialTable from 'material-table';
 import {SHEET_FACTORY} from "../../../config/enviroment.config";
+/* Services */
 /* Style */
 import "./style.css";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-/* Services */
 
 class HoursList extends Component {
     constructor(props) {
