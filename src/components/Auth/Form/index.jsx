@@ -9,7 +9,6 @@ import {
     Paper,
     Typography
 } from '@material-ui/core';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Select from "react-select";
 /* Services */
 import {SHEET_FACTORY} from "../../../config/enviroment.config";
@@ -36,8 +35,7 @@ class AuthForm extends Component {
     render() {
         const {elements, selectedElement} = this.state;
         return <Paper className="paper">
-            <Avatar className="avatar">
-                <LockOutlinedIcon/>
+            <Avatar src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/katomic.png" className="avatar">
             </Avatar>
             <Typography component="h1" variant="h5">
                 Hours Collective

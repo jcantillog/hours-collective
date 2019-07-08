@@ -6,8 +6,11 @@
 }
 
 .paper > .avatar {
-    margin: 1px;
+    margin: 10px;
     background-color: #083169;
+}
+.paper > .avatar > .img{
+    width: 60px;
 }
 
 .paper > .form {
