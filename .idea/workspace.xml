@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ecf074-7dfa-4882-9925-edb95c240dec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Particles/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Particles/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Particles/style.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/AnimationContainer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,48 +18,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#!!block;n#componentDidMount#0;n#AuthForm#0" />
-                <element signature="n#!!block;n#handlerRouteChange#0;n#AuthForm#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Particles/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/AnimationContainer/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="312">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#12#38#0" expanded="true" />
-                <element signature="e#4#91#0" />
+                <element signature="e#4#32#0" />
+                <element signature="e#4#32#0" />
+                <element signature="e#727#830#0" />
+                <element signature="e#843#950#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Login/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="519">
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#73#118#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/Login/style.css">
+        <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="-2380">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#763#784#0" expanded="true" />
+                <element signature="e#2000#3195#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="4" selection-end-column="18" />
+              <folding>
+                <element signature="e#727#880#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/services/Factories/GoogleSheetsFactory.js" />
         <option value="$PROJECT_DIR$/src/services/Factories/Factory.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
         <option value="$PROJECT_DIR$/src/config/enviroment.config.js" />
         <option value="$PROJECT_DIR$/src/services/Factories/GoogleSheetsFactory.ts" />
         <option value="$PROJECT_DIR$/src/components/Hours/List/index.jsx" />
@@ -137,6 +147,8 @@
         <option value="$PROJECT_DIR$/src/components/UI/Button/style.css" />
         <option value="$PROJECT_DIR$/src/routes.jsx" />
         <option value="$PROJECT_DIR$/src/components/UI/Particles/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Hours/Register/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/UI/AnimationContainer/index.jsx" />
       </list>
     </option>
   </component>
@@ -155,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +191,21 @@
               <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Hours" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Hours" type="462c0819:PsiDirectoryNode" />
+              <item name="Register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,32 +214,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Particles" type="462c0819:PsiDirectoryNode" />
+              <item name="AnimationContainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Snackbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
               <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hours-collective" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hours-collective" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UI/Particles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UI/AnimationContainer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -226,17 +254,17 @@
     <property name="ts.external.directory.path" value="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\UI\Particles" />
-      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\Auth\Form" />
-      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\config" />
-      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\services" />
-      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\UI\Snackbar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src" />
       <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\services\Classes" />
       <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\services\Factories" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\UI\AnimationContainer" />
+      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\UI\Particles" />
+      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\components\Auth\Form" />
+      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\config" />
+      <recent name="C:\Users\Jonathan\Desktop\Vacancies\Elemento43\ElementarySchool\ReactSchool\hours-collective\src\services" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -302,16 +330,17 @@
       <workItem from="1562269772817" duration="3199000" />
       <workItem from="1562339063302" duration="4616000" />
       <workItem from="1562453658344" duration="1117000" />
-      <workItem from="1562594057495" duration="13652000" />
+      <workItem from="1562594057495" duration="14077000" />
+      <workItem from="1562681200866" duration="4639000" />
+      <workItem from="1562783963875" duration="5459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200376000" />
+    <option name="totallyTimeSpent" value="210899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49872124" visible="true" weight="0.13804004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -373,16 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -405,16 +424,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="e#124#152#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -517,17 +526,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="n#!!block;n#constructor#0;n#HoursList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#698#719#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -644,28 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#73#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Auth/Form/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/Login/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -690,12 +670,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Particles/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="189">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#12#38#0" expanded="true" />
             <element signature="e#4#91#0" />
+            <element signature="e#289#656#0" />
+            <element signature="e#673#3423#0" />
+            <element signature="e#3441#6508#0" />
+            <element signature="e#6523#7316#0" />
+            <element signature="e#7335#8378#0" />
+            <element signature="e#8400#9979#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/Login/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="75" lean-forward="true" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#727#880#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#73#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hours/Register/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2380">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#763#784#0" expanded="true" />
+            <element signature="e#2000#3195#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/AnimationContainer/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#4#32#0" />
+            <element signature="e#4#32#0" />
+            <element signature="e#727#830#0" />
+            <element signature="e#843#950#0" />
           </folding>
         </state>
       </provider>

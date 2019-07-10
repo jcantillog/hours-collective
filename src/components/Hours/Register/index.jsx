@@ -24,10 +24,11 @@ import {
 import DateFnsUtils from '@date-io/date-fns';
 /* Services */
 import { isValidDate } from "../../../services/utils";
+import {SHEET_FACTORY} from "../../../config/enviroment.config";
 /* Style */
 import "./style.css";
 import styled, { keyframes } from 'styled-components';
-import {SHEET_FACTORY} from "../../../config/enviroment.config";
+import AnimationContainer from "../../UI/AnimationContainer";
 
 const bounceAnimation = keyframes`${fadeInDown}`;
 
@@ -97,15 +98,10 @@ class HoursRegister extends Component {
             singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
         };
 
-        return <Paper style={{ border: `1px solid ${selectedProject ? selectedProject.color : 'white'}` }}
-                      className="paper">
-            <Typography component="h1" variant="h5" className="typography">
-                Welcome, {elemento}
-            </Typography>
-            <Typography component="p" className="typography">
-                Please, enter the number of hours worked
-            </Typography>
-            {/*<Select className="select-projects"
+        return <AnimationContainer title={`Welcome, ${elemento}`}
+                                   description={`Please, enter the number of hours worked`}
+                                   projectColor={selectedProject ? selectedProject.color : 'white'}>
+            <Select className="select-projects"
                     placeholder="Select a project..."
                     isDisabled={false}
                     isLoading={false}
@@ -188,8 +184,8 @@ class HoursRegister extends Component {
                         />
                     </Snackbar>
                 </div>
-            )}*/}
-        </Paper>
+            )}
+        </AnimationContainer>
     }
 
     handlerProjectSelect = (project) => this.setState({ selectedProject: project });
